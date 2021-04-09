@@ -1,0 +1,104 @@
+@import 'responsive'
+
+.personal
+	padding-bottom: 15px
+
+.delivery
+	margin-bottom: 65px
+	+media(md)
+		margin-bottom: 45px
+	&__title
+		font-size: 36px
+		line-height: 1.2
+		text-transform: uppercase
+		text-align: center
+		padding-bottom: 45px
+		font-weight: 200
+		+media(sm)
+			font-size: 28px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -20px
+		padding-bottom: 35px
+		+media(xs)
+			margin: 0px
+			padding-bottom: 25px
+
+	&__item
+		width: calc(100% / 2 - 40px)
+		display: flex
+		align-items: center
+		background-color: #fff
+		border-radius: 20px
+		padding: 20px
+		margin: 0 20px
+		margin-bottom: 30px
+		+media(xs)
+			width: 100%
+			max-width: 300px
+			margin: 0px auto
+			margin-bottom: 30px
+
+	&__elem
+		cursor: pointer
+		position: relative
+		user-select: none
+		display: inline-block
+		padding-left: 57px
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+			border-radius: 15px
+
+		&:after
+			top: calc(50% - 13px)
+			left: 0px
+			width: 26px
+			height: 26px
+			border: 2px solid #1B58B1
+
+		&:before
+			z-index: 3
+			opacity: 0
+			top: calc(50% - 8px)
+			left: 5px
+			width: 16px
+			height: 16px
+			background-color: #1B58B1
+		img
+			display: block
+
+	&__group
+		display: none
+		&:checked + .delivery__elem:before
+			opacity: 1
+
+	.select__placeholder
+		font-size: 16px
+		text-transform: none
+		border: none
+		border-radius: 20px
+		padding: 10px 20px
+		padding-bottom: 11px
+
+	.select__wrap:after
+		right: 25px
+
+	.select__list
+		top: calc(100% + 10px)
+		border-radius: 20px
+
+	.select__item:not(.select__item--search)
+		text-transform: none
+		padding: 8px 20px
+
+	.select__item--search
+		input
+			border: none
+			padding: 8px 20px
+
+	.select__wrap:after
+		border-color: #333

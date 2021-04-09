@@ -1,0 +1,115 @@
+@import 'responsive'
+
+.main-footer
+	.btn--popup
+		+media(mdx)
+			margin-bottom: 25px
+		+media(sm)
+			display: none
+
+	&__holder
+		display: flex
+		align-items: center
+		padding-bottom: 48px
+		+media(mdx)	
+			flex-wrap: wrap
+			justify-content: center
+			padding-bottom: 10px	
+
+	&__list
+		display: flex
+		align-items: center
+		padding-right: 24px
+		margin: 0 -15px
+		margin-right: auto
+		+media(mdx)	
+			margin-right: 0px
+		+media(smx)
+			flex-direction: column
+			padding-right: 0px	
+			padding-bottom: 10px	
+			margin: 0px	
+
+	&__link
+		display: block	
+		font-size: 14px
+		line-height: 1.2
+		color: #000
+		text-transform: uppercase
+		margin: 0 15px
+		transition: 0.3s color
+		+media(mdx)
+			margin-bottom: 25px	
+		+media(smx)
+			margin: 0px	
+			margin-bottom: 20px	
+		&:hover
+			color: #1B58B1
+
+	&__contacts
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		margin: 0 -17px
+		+media(mdx)	
+			flex-basis: 100%	
+			order: 2
+			justify-content: center
+		+media(xs)
+			flex-direction: column
+			margin: 0px	
+
+	&__block
+		background-image: url(../img/icons/phone.svg)
+		background-size: 20px
+		background-position: left center
+		background-repeat: no-repeat
+		font-size: 14px
+		line-height: 1.2
+		color: #000
+		padding: 5px 0
+		padding-left: 34px
+		margin: 0 17px
+		+media(mdx)	
+			margin-bottom: 25px	
+		+media(xs)
+			margin: 0px	
+			margin-bottom: 25px	
+		&--email
+			background-image: url(../img/icons/email.svg)
+
+	&__desc
+		padding-bottom: 45px
+		p
+			font-size: 10px
+			line-height: 1.5
+			color: #000
+			text-transform: uppercase
+			text-align: center
+			a
+				color: #000
+				transition: 0.3s color
+				&:hover
+					color: #1B58B1
+
+
+.msg-modal
+	position: fixed
+	top: 30%
+	left: calc(50% - 150px)
+	width: 300px
+	padding: 20px 30px
+	border-radius: 15px
+	text-align: center
+	background-color: #1B58B1
+	color: #fff
+	opacity: 0
+	visibility: hidden
+	font-size: 18px
+	line-height: 1.5
+	border-radius: 5px
+	z-index: 20
+	transition: 0.3s visibility, 0.3s opacity
+	&-active
+		opacity: 1
+		visibility: visible

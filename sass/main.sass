@@ -1,0 +1,354 @@
+@import 'responsive'
+
+body
+	margin: 0
+	padding: 0
+	overflow-x: hidden
+	//height: 4000px
+	width: 100%
+	//min-height: 100vh
+	color: #333333
+	background-color: #eef1f6
+	font-size: 16px
+	line-height: 1.2
+	font-weight: normal
+	font-style: normal
+	font-family: "roboto"
+
+
+img
+	max-width: 100%
+	height: auto
+
+.svg
+	&-about
+		display: none
+
+.container
+	max-width: 1230px
+	width: 100%
+	margin: 0 auto
+	padding: 0 15px
+	&--inner
+		max-width: 100%
+		padding: 0px
+
+	&--header
+		max-width: 1280px
+		padding: 0px 10px
+		+media(smdx)
+			padding: 0px
+
+	&--data
+		+media(md)
+			padding: 0px
+
+	&--contacts
+		max-width: 630px
+
+	&--delivery
+		max-width: 730px
+
+.input
+	display: block
+	width: 100%
+	font-size: 16px
+	background-color: #fff
+	color: #808080
+	border: none
+	outline: none
+	border-radius: 20px
+	padding: 13px 20px
+	&--area
+		resize: none
+		min-height: 150px
+
+	&.form-fail
+		border-color: #b00
+
+	&.form-done
+		border-color: #90ee90
+
+	&::placeholder
+		color: #333
+	&:focus::placeholder
+		color: transparent
+
+.title
+	font-size: 48px
+	line-height: 1
+	color: #1B58B1
+	text-transform: uppercase
+	padding-bottom: 50px
+	font-weight: 200
+	+media(md)
+		font-size: 42px
+		padding-bottom: 30px
+	+media(sm)
+		font-size: 32px
+	+media(xs)
+		font-size: 26px
+	&--inner
+		padding-right: 28px
+
+.btn
+	display: block
+	width: 100%
+	cursor: pointer
+	font: inherit
+	font-size: 18px
+	color: #1B58B1
+	background-color: transparent
+	border: none
+	border-radius: 20px
+	outline: none
+	text-align: center
+	text-transform: uppercase
+	padding: 11px 10px
+	font-weight: normal
+	transition: 0.3s background-color, 0.3s color, 0.3s border
+
+	&--popup
+		position: relative
+		z-index: 3
+		width: 30px
+		height: 30px
+		padding: 0px
+		margin-right: 24px
+		svg
+			display: block
+			fill: #1B58B1
+			transition: 0.3s fill
+		&:hover	svg
+			fill: #0b2347
+
+	&--data
+		position: relative
+		width: 36px
+		height: 36px
+		padding: 0px
+		margin: 0 auto
+		&:before
+			content: ''
+			position: absolute
+			top: calc(50% - 19px)
+			left: calc(50% - 12px)
+			width: 24px
+			height: 24px
+			border-right: 2px solid #1B58B1
+			border-bottom: 2px solid #1B58B1
+			transform: rotate(45deg)
+			transition: 0.3s border-color
+		&:hover
+			&:before
+				border-color: #0b2347
+
+	&--details
+		position: relative
+		z-index: 3
+		max-width: 230px	
+		background-color: #eef1f6
+		border: 1px solid #1B58B1
+		margin-right: 68px
+		margin-bottom: 30px
+		+media(sm)
+			margin-right: 40px		
+		+media(xs)
+			margin-right: 0px
+		&:hover
+			background-color: #1B58B1
+			color: #fff
+
+	&--buy
+		background-color: #1B58B1
+		color: #fff
+		padding: 12px 10px
+		+media(sm)
+			max-width: 260px
+			margin: 0 auto
+		&:hover
+			background-color: #0b2347
+
+	&--blog
+		position: relative
+		display: block
+		font-size: 16px
+		text-align: left
+		padding: 5px 0px
+		margin-bottom: 12px
+		font-weight: 700
+		&:after
+			content: ''
+			position: absolute
+			top: calc(50% - 1px)
+			right: 0
+			width: 22px
+			height: 2px
+			background-color: #1B58B1
+			transition: 0.3s background-color
+
+		&:before
+			content: ''
+			position: absolute
+			top: calc(50% - 7px)
+			right: 2px
+			width: 14px
+			height: 14px
+			border-top: 2px solid #1B58B1
+			border-right: 2px solid #1B58B1
+			transform: rotate(45deg)
+			transition: 0.3s border-color
+
+	&--consult
+		max-width: 290px
+		border: 1px solid #1B58B1
+		margin: 0 auto
+		&:hover
+			background-color: #1B58B1
+			color: #fff
+
+	&--send
+		max-width: 230px
+		background-color: #1B58B1
+		color: #fff
+		padding: 12px 5px
+		margin: 0 auto
+
+		&[disabled]
+			cursor: default
+			opacity: 0.5
+			text-decoration: line-through
+
+		&:not(:disabled)
+			&:hover
+				background-color: #0b2347
+
+	&--clear
+		width: 235px	
+		border: 2px solid #1B58B1
+		+media(sm)
+			width: 100%	
+			max-width: 360px
+			margin: 0 auto
+		&:hover
+			background-color: #1B58B1
+			color: #fff
+
+	&--search
+		width: calc(100% - 235px)
+		background-color: #1B58B1
+		color: #fff
+		padding: 12px 10px
+		margin-right: 25px
+		+media(sm)
+			width: 100%	
+			max-width: 360px
+			margin: 0 auto
+			margin-bottom: 30px	
+		&:hover
+			background-color: #0b2347
+
+	&--order
+		background-color: #1B58B1
+		color: #fff
+		max-width: 305px
+		margin: 0 auto
+		margin-top: 40px
+		&[disabled]
+			cursor: default
+			opacity: 0.5
+			text-decoration: line-through
+
+		&:not(:disabled)
+			&:hover
+				background-color: #0b2347
+
+
+.breadcrumbs
+	&__list
+		padding-bottom: 13px
+		li
+			cursor: default
+			display: inline-block
+			text-transform: uppercase
+			margin-bottom: 10px
+			a
+				position: relative
+				margin-right: 17px
+				transition: 0.3s color
+				+media(md)
+					margin-right: 10px
+				&:hover
+					color: #1B58B1
+				&:after
+					margin-left: 19px
+					content: '|'
+					color: #000
+					+media(md)
+						margin-left: 12px
+		li, a
+			font-size: 14px
+			line-height: 1.3
+			color: #000
+
+.nav-links
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: center
+	margin: 0 -8px
+
+.navigation 
+	margin: 0 auto
+	text-align: center
+	padding-top: 15px	
+	padding-bottom: 34px
+	+media(md)
+		padding-bottom: 25px
+	a, span
+		text-decoration: none
+		font-size: 16px
+		line-height: 1.2
+		color: #000
+
+	.page-numbers
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 30px
+		height: 30px
+		background-color: #fff
+		color: #000
+		border: 1px solid transparent
+		border-radius: 20px
+		margin: 0 8px
+		margin-bottom: 15px
+		transition: 0.3s background-color, 0.3s color, 0.3s border-color
+
+		&:hover:not(.dots,.current)
+			border-color: #1B58B1
+			color: #1B58B1
+
+		&.current
+			cursor: default
+			border-color: #1B58B1
+			color: #1B58B1
+
+		&.dots
+			cursor: default
+			position: relative
+			border: none
+			font-size: 0px
+			background-color: transparent
+		
+			&:before
+				position: absolute
+				content: ' '
+				width: 22px
+				height: 4px
+				z-index: 3
+				pointer-events: none
+				background-image: url(../img/icons/decor--dots.svg)
+				background-repeat: no-repeat
+				background-size: 100%
+				background-position: center

@@ -1,0 +1,66 @@
+@import 'responsive'
+
+.categories
+	margin-top: 64px
+	padding-bottom: 30px
+	.title
+		padding-bottom: 25px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		padding-top: 35px
+		margin: 0 -20px
+		+media(smx)
+			margin: 0px
+
+	&__item
+		width: calc(100% / 4 - 40px)
+		display: block
+		background-color: #fff
+		padding: 0 30px
+		padding-top: 35px
+		padding-bottom: 26px
+		box-shadow: 0px 20px 30px 10px rgba(0, 0, 0, 0.05)
+		margin: 0 20px
+		margin-bottom: 45px
+		+media(lgxs)
+			width: calc(100% / 3 - 40px)
+		+media(md)
+			width: calc(100% / 2 - 40px)
+		+media(smx)
+			max-width: 400px
+			width: 100%
+			margin: 0 auto
+			margin-bottom: 38px
+
+		ul
+			li
+				font-size: 14px
+				line-height: 1.4
+				color: #000
+				text-align: center
+				margin-bottom: 3px
+
+	&__image
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: center
+		max-width: 160px
+		padding-top: 76%
+		margin: 0 auto
+		margin-bottom: 23px
+		+media(lgxs)
+			padding-top: 50%
+		+media(md)
+			padding-top: 35%
+		+media(smx)
+			margin-bottom: 18px
+
+	&__title
+		font-size: 16px
+		line-height: 1.2
+		color: #000
+		text-align: center
+		margin-bottom: 16px
+		font-weight: bold

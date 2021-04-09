@@ -1,0 +1,100 @@
+@import 'responsive'
+
+.partners
+	padding-bottom: 140px
+	+media(lgm)
+		padding-bottom: 100px
+	+media(md)
+		padding-bottom: 80px
+	+media(sm)
+		padding-bottom: 50px
+
+	.slick-track
+		display: flex
+		justify-content: center
+		align-items: center
+
+	&__item
+		outline: none
+		margin: 0 20px
+		img
+			display: block
+			margin: 0 auto
+
+	&__holder
+		position: relative
+
+	&__arrow
+		position: absolute
+		top: calc(50% - 20px)
+		right: -60px
+		display: block
+		cursor: pointer
+		outline: none
+		border: none
+		background-color: transparent
+		width: 40px
+		height: 40px
+		padding: 0px
+		transition: 0.3s border
+		&:after
+			position: absolute
+			content: ' '
+			width: 20px
+			height: 20px
+			top: calc(50% - 10px)
+			left: calc(50% - 12px)
+			border-right: 2px solid #1B58B1
+			border-bottom: 2px solid #1B58B1
+			transform: rotate(-45deg)
+			transition: 0.3s border
+		+media(lgm)
+			display: none
+		&:hover:after
+			border-color: #0b2347
+	
+	&__dots-list
+		position: absolute
+		display: none
+		+media(lgm)
+			display: flex
+			position: relative
+			justify-content: center
+			right: initial
+			margin: 0 auto
+			margin-top: 55px
+
+		button
+			display: block
+			cursor: pointer
+			position: relative
+			background-color: transparent
+			width: 20px
+			height: 20px
+			font-size: 0px
+			padding: 0px
+			border: 4px solid transparent
+			outline: none
+			margin-bottom: 30px
+			&:after
+				position: absolute
+				content: ' '
+				left: calc(50% - 5px)
+				top: calc(50% - 5px)
+				width: 10px
+				height: 10px
+				background-color: #1B58B1
+				border-radius: 50%
+				transition: 0.3s background-color, 0.3s transform
+
+		li
+			&:not(:last-child)
+				+media(lgm)
+					margin-right: 12px
+
+			&.slick-active	button
+				border: 4px solid #1B58B1
+				border-radius: 50%
+				&:after
+					background-color: #fff
+					transform: scale(0)

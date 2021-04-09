@@ -1,0 +1,37 @@
+@import 'responsive'
+
+.news
+	margin-top: 80px
+	.blog__wrap
+		display: flex
+		flex-wrap: wrap
+		padding-top: 10px
+		margin: 0 -20px
+		+media(md)
+			padding-top: 0px
+		+media(sm)
+			margin: 0px	auto
+		&+.navigation
+			padding-top: 4px
+			padding-bottom: 100px
+			+media(md)
+				padding-bottom: 45px
+
+	.blog__item
+		width: calc(100% / 3 - 40px)
+		+media(md)
+			width: calc(100% / 2 - 40px)
+		+media(sm)
+			width: 100%
+
+	&--similar
+		padding-bottom: 30px
+		margin-top: 0px
+
+	&__content
+		font-size: 24px
+		line-height: 1.2
+		color: #1B58B1
+		text-transform: uppercase
+		padding-bottom: 45px
+		font-weight: 300

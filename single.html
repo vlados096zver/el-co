@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>EL-CO</title>
+
+	<link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<svg class="svg-about">
+	<g id="icon-cart">
+		<path d="M29.8269 5.72184C29.6552 5.46032 29.3788 5.29868 29.0787 5.28506L10.4694 4.43276C9.93544 4.40793 9.48925 4.84593 9.46643 5.4106C9.44373 5.97507 9.85528 6.45201 10.3867 6.47626L27.7361 7.27092L24.3248 18.5798H9.14431L6.40172 2.7129C6.34143 2.36514 6.11673 2.07503 5.80683 1.94584L1.31494 0.0708276C0.81988 -0.135114 0.261239 0.123258 0.0668123 0.648633C-0.127279 1.17429 0.115822 1.76822 0.610616 1.9748L4.60462 3.64195L7.39561 19.7873C7.47973 20.2727 7.87785 20.6252 8.3425 20.6252H8.80547L7.74827 23.7454C7.65979 24.0067 7.69624 24.297 7.84683 24.524C7.99722 24.7512 8.24179 24.8863 8.50289 24.8863H9.24441C8.78492 25.4296 8.50289 26.145 8.50289 26.9318C8.50289 28.6237 9.79855 30 11.3905 30C12.9826 30 14.2782 28.6237 14.2782 26.9318C14.2782 26.1451 13.9962 25.4296 13.5368 24.8863H19.8326C19.3729 25.4296 19.0909 26.145 19.0909 26.9318C19.0909 28.6237 20.3863 30 21.9786 30C23.571 30 24.8663 28.6237 24.8663 26.9318C24.8663 26.1451 24.5843 25.4296 24.125 24.8863H25.0267C25.4698 24.8863 25.8289 24.5047 25.8289 24.0341C25.8289 23.5633 25.4698 23.1818 25.0267 23.1818H9.6442L10.5104 20.6249H25.0267C25.4453 20.6249 25.8156 20.3376 25.9431 19.9144L29.9538 6.61872C30.0459 6.31526 29.9986 5.98349 29.8269 5.72184ZM11.3906 28.2958C10.6828 28.2958 10.1072 27.6842 10.1072 26.9321C10.1072 26.1801 10.6828 25.5684 11.3906 25.5684C12.0984 25.5684 12.674 26.1801 12.674 26.9321C12.674 27.6842 12.0984 28.2958 11.3906 28.2958ZM21.9786 28.2958C21.2708 28.2958 20.6952 27.6842 20.6952 26.9321C20.6952 26.1801 21.2708 25.5684 21.9786 25.5684C22.6864 25.5684 23.262 26.1801 23.262 26.9321C23.262 27.6842 22.6864 28.2958 21.9786 28.2958Z"/>
+	</g>
+	<g id="icon-favorites">
+		<path d="M27.5467 2.82014C25.9949 1.02524 23.8206 0.00397393 21.5425 0.000187944C19.2626 0.00302743 17.086 1.02376 15.5319 2.81899L15.0022 3.4213L14.4725 2.81899C11.3888 -0.75275 6.19822 -0.957869 2.87929 2.36075C2.73222 2.50786 2.59018 2.66065 2.45348 2.81899C-0.817827 6.6162 -0.817827 12.4846 2.45348 16.2818L14.2238 29.6396C14.631 30.1023 15.3097 30.1221 15.7396 29.6839C15.7536 29.6695 15.7673 29.6548 15.7806 29.6396L27.5467 16.2818C30.8178 12.485 30.8178 6.61694 27.5467 2.82014ZM25.9952 14.693H25.9942L15.0022 27.1693L4.00922 14.693C1.51013 11.7916 1.51013 7.30808 4.00922 4.40667C6.2787 1.75959 10.1126 1.59361 12.5723 4.03591C12.6918 4.15449 12.8067 4.27815 12.9169 4.40667L14.2238 5.8905C14.6545 6.35104 15.3499 6.35104 15.7806 5.8905L17.0876 4.40782C19.3571 1.76074 23.191 1.59476 25.6507 4.03706C25.7702 4.15564 25.8851 4.2793 25.9952 4.40782C28.5161 7.31383 28.5345 11.8055 25.9952 14.693Z"/>
+	</g>
+	<g id="icon-compare">
+		<path d="M12.232 2.155C12.58.94 13.706-.033 15.002 0c1.291-.03 2.418.94 2.765 2.154 2.584-.002 5.17.005 7.753-.005.287.008.637.003.812.278.313.385.017 1.057-.492 1.045-2.69.04-5.384.002-8.077.017-.341 1.212-1.47 2.174-2.757 2.149-1.293.033-2.427-.934-2.772-2.149-2.58-.002-5.161-.003-7.744.002-.321.006-.723-.024-.876-.362-.237-.41.098-.995.58-.964 2.679-.03 5.36-.001 8.038-.011zm2.147-.687c-1.043.42-1.16 2.027-.193 2.595.887.64 2.269-.051 2.296-1.14.125-1.078-1.134-1.954-2.103-1.455zM6.074 5.32c.21-.37.825-.38 1.052-.018.235.412.357.874.523 1.315 1.554 4.233 3.106 8.465 4.661 12.698.419.03 1.012.232.884.77-.427 1.842-1.732 3.443-3.402 4.313-1.557.822-3.436.985-5.125.5-2.252-.635-4.124-2.534-4.653-4.823-.113-.53.467-.732.884-.758 1.56-4.23 3.107-8.462 4.661-12.693.165-.437.287-.894.515-1.304zm.532 2.328A9792.557 9792.557 0 002.31 19.362h8.592c-1.43-3.906-2.86-7.81-4.296-11.714zM22.756 5.519c.15-.635 1.13-.624 1.276.008 1.702 4.591 3.37 9.197 5.069 13.79.42.023 1.007.237.882.77-.427 1.824-1.71 3.413-3.36 4.286-1.625.877-3.608 1.027-5.362.467-2.162-.682-3.941-2.532-4.456-4.751-.13-.529.455-.754.875-.769 1.709-4.594 3.37-9.207 5.076-13.801zm-3.662 13.843h8.595c-1.429-3.906-2.862-7.81-4.294-11.714a9883.433 9883.433 0 00-4.301 11.714z"/>
+	</g>
+	<g id="icon-dots">
+		<path d="M29.864 1.172c1.513 1.562 1.513 4.094 0 5.656a3.79 3.79 0 01-5.48 0c-1.513-1.562-1.513-4.094 0-5.656a3.79 3.79 0 015.48 0zM18.24 1.172c1.512 1.562 1.512 4.094 0 5.656a3.79 3.79 0 01-5.48 0c-1.514-1.562-1.514-4.094 0-5.656a3.79 3.79 0 015.48 0zM6.615 1.172c1.513 1.562 1.513 4.094 0 5.656a3.79 3.79 0 01-5.48 0c-1.513-1.562-1.513-4.094 0-5.656a3.79 3.79 0 015.48 0z"/>
+	</g>
+	<g id="btn-popup"> 
+		<path d="M3.6 0C1.67 0 .1 1.6.1 3.57a3.54 3.54 0 003.5 3.57c1.94 0 3.5-1.6 3.5-3.57A3.54 3.54 0 003.6 0zM14.95 0c-1.93 0-3.5 1.6-3.5 3.57a3.54 3.54 0 003.5 3.57c1.94 0 3.51-1.6 3.51-3.57A3.54 3.54 0 0014.96 0zM26.5 7.14c1.93 0 3.5-1.6 3.5-3.57A3.54 3.54 0 0026.5 0c-1.94 0-3.52 1.6-3.52 3.57a3.54 3.54 0 003.51 3.57zM3.5 18.59c1.94 0 3.52-1.6 3.52-3.57a3.54 3.54 0 00-3.51-3.57c-1.94 0-3.51 1.6-3.51 3.57a3.54 3.54 0 003.5 3.57zM14.86 18.59c1.94 0 3.51-1.6 3.51-3.57a3.54 3.54 0 00-3.5-3.57c-1.94 0-3.52 1.6-3.52 3.57a3.54 3.54 0 003.51 3.57zM26.4 18.59c1.94 0 3.5-1.6 3.5-3.57a3.54 3.54 0 00-3.5-3.57c-1.93 0-3.5 1.6-3.5 3.57a3.54 3.54 0 003.5 3.57zM3.59 22.86c-1.94 0-3.51 1.6-3.51 3.57A3.55 3.55 0 003.58 30c1.94 0 3.52-1.6 3.52-3.57a3.54 3.54 0 00-3.51-3.57zM14.94 22.86c-1.93 0-3.5 1.6-3.5 3.57a3.54 3.54 0 003.5 3.57c1.94 0 3.51-1.6 3.51-3.57a3.54 3.54 0 00-3.5-3.57zM26.48 22.86c-1.93 0-3.5 1.6-3.5 3.57a3.54 3.54 0 003.5 3.57c1.94 0 3.5-1.6 3.5-3.57a3.54 3.54 0 00-3.5-3.57z"/>
+	</g>
+	<g id="icon-youtube"> 
+		<path d="M34.53 17.64l-11.66-6.39a2.12 2.12 0 00-2.12.04 2.12 2.12 0 00-1.05 1.84V25.8a2.13 2.13 0 002.14 2.15c.34 0 .7-.09 1.01-.26l11.67-6.27a2.14 2.14 0 00.01-3.77zM22.8 24.2v-9.46l8.72 4.77-8.72 4.69z"/>
+		<path d="M52.42 9.44v-.02c-.04-.43-.49-4.2-2.33-6.13a8.6 8.6 0 00-5.95-2.7l-.1-.01C37.07.07 26.53 0 26.42 0h-.01c-.1 0-10.65.07-17.7.58h-.1l-.24.04c-1.14.13-3.53.4-5.66 2.75C.95 5.27.45 8.97.4 9.39l-.01.05C.37 9.62 0 13.83 0 18.06V22c0 4.23.37 8.44.39 8.61v.03c.05.42.5 4.13 2.32 6.05 2 2.19 4.52 2.48 5.88 2.63l.53.07.12.02c4.03.38 16.67.57 17.2.58h.04c.1 0 10.65-.07 17.63-.58h.1l.29-.04c1.14-.12 3.5-.37 5.6-2.68 1.76-1.9 2.27-5.6 2.32-6.02v-.06c.02-.17.4-4.38.4-8.61v-3.95c0-4.23-.38-8.44-.4-8.62zm-2.7 12.57c0 3.91-.35 7.94-.38 8.31-.13 1.02-.66 3.36-1.52 4.29a5.09 5.09 0 01-3.65 1.7c-.12 0-.23.02-.33.03-6.75.49-16.9.56-17.36.56-.53 0-12.98-.2-16.9-.56l-.64-.08C7.8 36.13 6.2 35.95 5 34.61l-.03-.03c-.84-.88-1.36-3.07-1.49-4.25-.02-.28-.38-4.35-.38-8.32v-3.95c0-3.91.35-7.94.38-8.32.16-1.2.7-3.4 1.52-4.28a5.34 5.34 0 013.73-1.77c.09 0 .17-.02.25-.03 6.85-.49 17.07-.56 17.44-.57.36 0 10.58.08 17.37.57l.27.03c.97.11 2.44.28 3.79 1.72l.01.01c.84.88 1.36 3.1 1.5 4.31.01.26.37 4.35.37 8.33V22z"/>
+	</g>
+	<g id="icon-facebook"> 
+		<path d="M35.3125 0H4.6875C2.10281 0 0 2.10281 0 4.6875V35.3125C0 37.8972 2.10281 40 4.6875 40H35.3125C37.8972 40 40 37.8972 40 35.3125V4.6875C40 2.10281 37.8972 0 35.3125 0ZM36.875 35.3125C36.875 36.1741 36.1741 36.875 35.3125 36.875H26.4062V24.1406H31.2336L32.0312 19.2969H26.4062V15.9375C26.4062 14.6113 27.4238 13.5938 28.75 13.5938H31.9531V8.75H28.75C24.7716 8.75 21.5642 11.9727 21.5642 15.9511V19.2969H16.875V24.1406H21.5642V36.875H4.6875C3.82594 36.875 3.125 36.1741 3.125 35.3125V4.6875C3.125 3.82594 3.82594 3.125 4.6875 3.125H35.3125C36.1741 3.125 36.875 3.82594 36.875 4.6875V35.3125Z"/>
+	</g>
+	<g id="icon-twitter">
+		<path d="M29.44 0H10.56A10.45 10.45 0 000 10.56v18.88C0 35.36 4.64 40 10.56 40h18.88C35.36 40 40 35.36 40 29.44V10.56C40 4.64 35.36 0 29.44 0zm7.98 29.44a7.9 7.9 0 01-7.98 7.98H10.56a7.9 7.9 0 01-7.98-7.98V10.56a7.9 7.9 0 017.98-7.98h18.88a7.9 7.9 0 017.98 7.98v18.88z"/>
+		<path d="M32.58 10.21c-.41-.3-.97-.33-1.41-.07-.44.26-1.42.39-2.2.5-.17.01-.33.03-.48.06a6.2 6.2 0 00-3.95-1.43 6.1 6.1 0 00-6.12 5.7 12.56 12.56 0 01-7.58-4.36 1.29 1.29 0 00-2.18.3c-.08.2-.8 1.97-.8 6.35 0 3.8 3 6.58 5.05 8.05-1.4.64-3.02.87-4.56.7a1.3 1.3 0 00-.84 2.38 15.18 15.18 0 008.11 2.34A14.8 14.8 0 0030.68 16.3c.26-.39.77-1.14 1.63-2.46.34-.53.63-1.67.77-2.3.11-.5-.09-1.03-.5-1.33zm-4.23 4.91a1.3 1.3 0 00-.25.76c0 5.1-3.87 12.27-12.48 12.27-.77 0-1.55-.08-2.3-.21 1-.39 1.96-.92 2.84-1.6a1.3 1.3 0 00-.2-2.17c-.06-.03-5.52-2.9-5.52-6.9 0-1.36.07-2.41.17-3.22a15.2 15.2 0 009.23 3.66 1.29 1.29 0 001.2-1.8 3.52 3.52 0 013.5-4.06c.98 0 1.93.4 2.6 1.1.3.33.75.47 1.17.39.3-.06.64-.1 1-.15l.38-.05a65.07 65.07 0 01-1.34 1.98z"/>
+	</g>
+	<g id="icon-instagram">
+		<path d="M28.96 0H11.04A11.05 11.05 0 000 11.04v17.92C0 35.05 4.95 40 11.04 40h17.92C35.05 40 40 35.05 40 28.96V11.04C40 4.95 35.05 0 28.96 0zm7.5 28.96a7.5 7.5 0 01-7.5 7.5H11.04a7.5 7.5 0 01-7.5-7.5V11.04a7.5 7.5 0 017.5-7.5h17.92a7.5 7.5 0 017.5 7.5v17.92z"/>
+		<path d="M20 9.7a10.32 10.32 0 000 20.6 10.32 10.32 0 000-20.6zm0 17.06a6.77 6.77 0 11.02-13.53A6.77 6.77 0 0120 26.76zM30.74 6.68a2.61 2.61 0 00-2.6 2.6 2.62 2.62 0 002.6 2.6c.69 0 1.36-.27 1.84-.75a2.62 2.62 0 000-3.68 2.61 2.61 0 00-1.84-.77z"/>
+	</g>
+</svg>
+
+	
+				<header class="main-header main-header--fixed">
+					<div class="container">
+						<div class="main-header__holder">
+							<button class="btn btn--popup">
+								<svg viewBox="0 0 30 30">
+									<use xlink:href="#btn-popup" />
+								</svg>
+							</button>
+							<ul class="main-header__list">
+								<li><a href="" class="main-header__link main-header__link--active">Електрообладнання</a></li>
+								<li><a href="" class="main-header__link">Слабоструменеві мережі</a></li>
+								<li><a href="" class="main-header__link">Тепла підлога</a></li>
+							</ul>
+							<p class="main-header__block">+380 67 455 45 45</p>
+							<div class="main-header__icons">
+								<button class="main-header__btn">
+									<svg viewBox="0 0 30 30">
+										<use xlink:href="#icon-compare" />
+									</svg>
+								</button>
+								<button class="main-header__btn">
+									<svg viewBox="0 0 30 30">
+										<use xlink:href="#icon-favorites" />
+									</svg>
+									<span class="main-header__count">3</span>
+								</button>
+								<button class="main-header__btn">
+									<svg viewBox="0 0 30 30">
+										<use xlink:href="#icon-cart" />
+									</svg>
+									<span class="main-header__count main-header__count--elem">4</span>
+								</button>
+							</div>
+							<div class="main-header__lang">
+								 <ul>
+									<li id="qtranslate-3" class="widget qtranxs_widget">
+									    <ul class="language-chooser language-chooser-text qtranxs_language_chooser" id="qtranslate-3-chooser">
+										    <li class="lang-ua active">
+										        <a href="" lang="ua" title="Рус (ua)" class="qtranxs_text qtranxs_text_ua"><span>Укр</span></a>
+										    </li>
+										    <li class="lang-ru">
+							                    <a href="" lang="ru" title="Рус (ru)" class="qtranxs_text qtranxs_text_ru"><span>Рус</span></a>
+							                 </li>
+										</ul>
+										<div class="qtranxs_widget_end"></div>
+									</li>
+								</ul>
+							</div>
+							
+							<div class="main-header__content">
+			                    <div class="main-header__button">
+			                      	<button type="button"></button>
+			                    </div>
+			                    <form class="main-header__search" action="" method="GET">
+			                        <div class="main-header__search-wrap">
+			                            <input class="main-header__input" placeholder="Пошук" type="search" name="s" id="s" value="">
+			                            <button type="submit" class="main-header__search-btn"></button>
+			                        </div>
+			                    </form>
+			                </div>
+			               
+						</div><!--end main-header__holder-->
+					</div>
+					
+				</header>
+
+				<section class="single">
+					<div class="container">
+						<div class="single__wrap">
+						    <ul class="breadcrumbs__list">
+							   <li><a href="">Головна</a></li>
+							   <li><a href="">Електрообладнання</a></li>
+							   <li>Реле напруги</li>
+						    </ul>
+						    <h3 class="single__title">Биометрический контроллер доступа ZKTeco inBio260</h3>
+
+						    <div class="single__holder">
+						    	<div class="single__box single__box--elem">
+						    		<div class="single__big">
+										<img src="https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg" alt="">
+									</div>
+								    <div class="single__gallery">
+										<div class="single__col single__col--active">
+											<img src="https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg" alt="">
+										</div>
+										<div class="single__col">
+											<img src="https://img.strana.ua/img/article/3271/biolaboratorii-ssha-v-10_main.jpeg" alt="">
+										</div>
+										<div class="single__col">
+											<img src="https://i.pinimg.com/originals/be/39/7c/be397c91b8026b17f5f8a6ed98e23e9e.jpg" alt="">
+										</div>
+										<div class="single__col">
+											<img src="https://img.strana.ua/img/article/3271/biolaboratorii-ssha-v-10_main.jpeg" alt="">
+										</div>
+						            </div><!--end single__gallery-->
+						    	</div>
+						    	
+						    	<div class="single__box single__box--content">
+						    		<div class="single__inner">
+							    		<p class="single__price"><span class="single__count">7000</span>uan</p>
+							    		<div class="product__icons">
+											<button class="product__btn">
+												<svg viewBox="0 0 30 30">
+													<use xlink:href="#icon-favorites"></use>
+												</svg>
+											</button>
+											<button class="product__btn">
+												<svg viewBox="0 0 30 30">
+													<use xlink:href="#icon-compare"></use>
+												</svg>
+											</button>
+											<button class="product__btn">
+												<svg viewBox="0 0 30 30">
+													<use xlink:href="#icon-cart"></use>
+												</svg>
+											</button>
+										</div>
+							    	</div>
+							    	<div class="single__row">
+							    		<div class="single__container">
+							    			<button class="single__btn single__btn--decrement"></button>
+							    			<input type="text" value="1" data-price="7000" class="single__input">
+							    			<button class="single__btn single__btn--increment"></button>
+							    		</div>
+							    		<button class="btn btn--buy">Купить</button>
+							    	</div>
+						    		<div class="single__text">
+						    			<p>Беспроводная точка доступа предназначена для создания или расширения масштабируемой высокоскоростной сети Wi-Fi;
+										Частота Wi-Fi 2,4 ГГц и 5 ГГц;</p>
+										<p>Скорость передачи данных до 1317 Мбит/с (450 Мбит/с + 867 Мбит/с);</p>
+										<p>Оснащена 1 встроенной антенной (3 dBi);</p>
+										<p>Поддержка Ethernet, пассивной технологии PoE;</p>
+										<p>Совместима со всеми устройствами стандартов IEEE 802.11 b/g/n/ac;</p>
+										<p>Функция внутрисетевого роуминга.</p>
+						    		</div>
+						    	</div><!--end single__box--content-->
+						    </div>
+						</div>
+					</div>
+				</section>
+
+				<section class="tabs">
+					<div class="container">
+						<div class="tabs__holder">
+							<ul class="tabs__list">
+								<li class="tabs__box tabs__box--active">Описание</li>
+								<li class="tabs__box ">Характеристики</li>
+								<li class="tabs__box">Отзывы</li>
+								<li class="tabs__box">Файлы и инструкции</li>
+								<li class="tabs__box">Видео</li>
+							</ul>
+							<div class="tabs__content">
+								<div class="tabs__item">
+									<div class="tabs__desc">
+										<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, aliquam! Quia consectetur, maiores similique fugiat a ipsam iure ut aperiam tenetur id deserunt, dolores, architecto repellat perferendis omnis numquam exercitationem.</p>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, laudantium! Aliquam exercitationem reiciendis, incidunt. Voluptates, assumenda sit. Tenetur ipsum odit, dolorum recusandae, sed aut in voluptates provident quia possimus quibusdam!</p>
+									</div>
+								</div><!--end tabs__item-->
+								<div class="tabs__item" style="display: none">
+									<div class="tabs__table">
+					                  <table>
+					                    <thead>
+					                      <tr>
+					                        <th>1</th>
+					                        <th>2</th>
+					                      </tr>
+					                    </thead>
+					                    <tbody>
+					                      <tr>
+					                        <td>3</td>
+					                        <td>5</td>
+					                      </tr>
+					                      <tr>
+					                        <td>5</td>
+					                        <td>6</td>
+					                      </tr>
+					                    </tbody>
+					                  </table>
+					                </div>
+								</div><!--end tabs__item-->
+								<div class="tabs__item" style="display: none">
+									<div class="reviews__wrap">
+										<div class="reviews__item">
+											<div class="reviews__inner">
+												<p class="reviews__fio">Андрей</p>
+												<p class="reviews__date">16 июля 2018 в 6:32</p>
+											</div>
+											<div class="reviews__text">
+												<p>Заказал сразу две штуки, себе и девушке, качеством обслуживания остался доволен. Товар пришёл быстро, дали гарантию 3 месяца. Пока никаких изъянов не вижу. Спасибо за работу.</p>
+											</div>
+										</div>
+										<div class="reviews__item reviews__item--answer">
+											<div class="reviews__inner">
+												<p class="reviews__fio">Андрей</p>
+												<p class="reviews__date">16 июля 2018 в 6:32</p>
+											</div>
+											<div class="reviews__text">
+												<p>Заказал сразу две штуки, себе и девушке, качеством обслуживания остался доволен. Товар пришёл быстро, дали гарантию 3 месяца. Пока никаких изъянов не вижу. Спасибо за работу.</p>
+											</div>
+										</div>
+									</div>
+									<div id="respond" class="comment-respond">
+										<form action="//ruchka-mebel.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+											<p class="comment-form-comment">
+
+											</p><div class="reviews-form__item">
+												<div class="reviews-form__block">
+													<label for="r_comment" class="reviews-form__label">Комментарий</label> 
+													<p class="reviews-form__required">обязательно</p>
+												</div>
+												<textarea id="r_comment" name="comment" required="required"></textarea>
+											</div>
+
+											<div class="reviews-form__item">
+												<div class="reviews-form__block">
+													<label for="r_email" class="reviews-form__label">E-mail</label> 
+													<p class="reviews-form__required">обязательно</p>
+												</div>
+												<input id="r_email" name="email" type="text" value="" size="30" maxlength="245" required="required">
+											</div>
+
+											<div class="reviews-form__item">
+												<div class="reviews-form__block">
+													<label for="r_name" class="reviews-form__label">Имя</label> 
+													<p class="reviews-form__required">обязательно</p>
+												</div>
+												<input id="r_name" type="text" value="" size="30" maxlength="245" required="required">
+											</div>
+
+											<input name="submit" type="submit" id="submit" class="submit" value="Отправить комментарий"> 
+										</form>
+									</div>
+								</div><!--end tabs__item-->
+								<div class="tabs__item" style="display: none">content</div><!--end tabs__item-->
+								<div class="tabs__item" style="display: none">
+									<div class="tabs__video-wrap">
+					                    <iframe src="https://www.youtube.com/embed/EK6C5tmwy4s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+					                </div>
+								</div><!--end tabs__item-->
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="product--similar">
+					<div class="container">
+						<h3 class="news__content">Схожі товари з категорії</h3>
+						<div class="product__holder">
+							<div class="product__wrap">
+								<div class="product__item">
+									<div class="product__image" style="background-image: url(img/product_1.png)"></div>
+									<h4 class="product__subtitle">Биометрический контроллер доступа ZKTeco inBio260</h4>
+									<div class="product__icons">
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-cart" />
+											</svg>
+										</button>
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-favorites" />
+											</svg>
+										</button>
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-compare" />
+											</svg>
+										</button>
+										<a href="" class="product__btn">
+											<svg viewBox="0 0 31 8">
+												<use xlink:href="#icon-dots" />
+											</svg>
+										</a>
+									</div>
+									<p class="product__price"><span class="product__count">7000 </span>uan</p>
+									<button class="btn btn--buy">Купить</button>
+								</div>
+								<div class="product__item">
+									<div class="product__image" style="background-image: url(img/product_1.png)"></div>
+									<h4 class="product__subtitle">Биометрический контроллер доступа ZKTeco inBio260</h4>
+									<div class="product__icons">
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-cart" />
+											</svg>
+										</button>
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-favorites" />
+											</svg>
+										</button>
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-compare" />
+											</svg>
+										</button>
+										<a href="" class="product__btn">
+											<svg viewBox="0 0 31 8">
+												<use xlink:href="#icon-dots" />
+											</svg>
+										</a>
+									</div>
+									<p class="product__price"><span class="product__count">7000 </span>uan</p>
+									<button class="btn btn--buy">Купить</button>
+								</div>
+
+								<div class="product__item">
+									<div class="product__image" style="background-image: url(img/product_2.png)"></div>
+									<h4 class="product__subtitle">Биометрический контроллер доступа ZKTeco inBio260</h4>
+									<div class="product__icons">
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-cart" />
+											</svg>
+										</button>
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-favorites" />
+											</svg>
+										</button>
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-compare" />
+											</svg>
+										</button>
+										<a href="" class="product__btn">
+											<svg viewBox="0 0 31 8">
+												<use xlink:href="#icon-dots" />
+											</svg>
+										</a>
+									</div>
+									<p class="product__price"><span class="product__count">7000 </span>uan</p>
+									<button class="btn btn--buy">Купить</button>
+								</div>
+								<div class="product__item">
+									<div class="product__image" style="background-image: url(img/product_2.png)"></div>
+									<h4 class="product__subtitle">Биометрический контроллер доступа ZKTeco inBio260</h4>
+									<div class="product__icons">
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-cart" />
+											</svg>
+										</button>
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-favorites" />
+											</svg>
+										</button>
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-compare" />
+											</svg>
+										</button>
+										<a href="" class="product__btn">
+											<svg viewBox="0 0 31 8">
+												<use xlink:href="#icon-dots" />
+											</svg>
+										</a>
+									</div>
+									<p class="product__price"><span class="product__count">7000 </span>uan</p>
+									<button class="btn btn--buy">Купить</button>
+								</div>
+
+								<div class="product__item">
+									<div class="product__image" style="background-image: url(img/product_3.png)"></div>
+									<h4 class="product__subtitle">555Биометрический контроллер доступа ZKTeco inBio260</h4>
+									<div class="product__icons">
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-cart" />
+											</svg>
+										</button>
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-favorites" />
+											</svg>
+										</button>
+										<button class="product__btn">
+											<svg viewBox="0 0 30 30">
+												<use xlink:href="#icon-compare" />
+											</svg>
+										</button>
+										<a href="" class="product__btn">
+											<svg viewBox="0 0 31 8">
+												<use xlink:href="#icon-dots" />
+											</svg>
+										</a>
+									</div>
+									<p class="product__price"><span class="product__count">7000 </span>uan</p>
+									<button class="btn btn--buy">Купить</button>
+								</div>
+							</div><!--emd product__wrap-->
+							<button class="product__arrow product__arrow--dir_right"></button>
+						</div><!--end product__holder-->
+					</div>
+				</section>
+
+				<section class="ask">
+					<div class="container">
+						<div class="ask__wrap">
+							<h3 class="ask__title">Залишились питання?</h3>
+							<div class="ask__desc">
+								<p>В нашому магазині Ви можете замовити безкоштовну консультацію!</p>
+							</div>
+							<button class="btn btn--consult">Замовити консультацію</button>
+						</div>
+						<div class="ask__text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+				</section>
+
+				<footer class="main-footer">
+					<div class="container">
+						<div class="main-footer__holder">
+							<button class="btn btn--popup">
+								<svg viewBox="0 0 30 30">
+									<use xlink:href="#btn-popup" />
+								</svg>
+							</button>
+							<ul class="main-footer__list">
+								<li><a href="" class="main-footer__link">Електрообладнання</a></li>
+								<li><a href="" class="main-footer__link">Слабоструменеві мережі</a></li>
+								<li><a href="" class="main-footer__link">Тепла підлога</a></li>
+							</ul>
+							<div class="main-footer__contacts">
+								<p class="main-footer__block">+380 67 455 45 45</p>
+								<p class="main-footer__block main-footer__block--email">info@site.com.ua</p>
+							</div>
+						</div>
+						<div class="main-footer__desc">
+							<p>© 1998 — 2021. будь-яке копіювання повинно супроводжуватися зворотнім посиланням. розроблено <a href="https://webworks.com.ua/">webworks.com.ua</a></p>
+						</div>
+					</div>
+				</footer>
+
+
+				<div class="popup popup__gallery">
+				  <div class="inner-overlay inner-img">
+				    <div class="overlay-close"></div>
+				      <div class="overlay-slider inner__data">
+				        <div class="single__col">
+				         <img src="https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg" alt="">
+				        </div>
+				        <div class="single__col">
+				          <img src="https://img.strana.ua/img/article/3271/biolaboratorii-ssha-v-10_main.jpeg" alt="">
+				         </div>
+				         <div class="single__col">
+				          <img src="https://i.pinimg.com/originals/be/39/7c/be397c91b8026b17f5f8a6ed98e23e9e.jpg" alt="">
+				         </div>
+				         <div class="single__col">
+				          <img src="https://img.strana.ua/img/article/3271/biolaboratorii-ssha-v-10_main.jpeg" alt="">
+				         </div>
+				      </div><!--end overlay-slider-->
+				  </div>
+				</div>
+
+				<div class="popup popup__menu">
+				    <div class="popup__block">
+				      <div class="popup__item popup__item--info">
+				        <p class="popup__desc">Меню</p>
+				        <ul class="popup__list">
+				          <li>
+				            <a class="popup__link" href="">Головна</a>
+				          </li>
+				          <li>
+				            <a class="popup__link" href="">Каталог</a>
+				          </li>
+				          <li>
+				            <a class="popup__link" href="">Електрообладнання</a>
+				          </li>
+				          <li>
+				            <a class="popup__link" href="">Слабоструменеві мережі</a>
+				          </li>
+				          <li>
+				            <a class="popup__link" href="">Тепла підлога</a>
+				          </li>
+				          <li>
+				            <a class="popup__link" href="">Оплата і доставка</a>
+				          </li>
+				          <li>
+				            <a class="popup__link" href="">Повернення товару</a>
+				          </li>
+				          <li>
+				            <a class="popup__link" href="">Про нас</a>
+				          </li>
+				          <li>
+				            <a class="popup__link" href="">Публікації</a>
+				          </li>
+				          <li>
+				            <a class="popup__link" href="">Контакти</a>
+				          </li>
+				        </ul>
+				      </div>
+				      <div class="popup__item popup__item--contacts">
+				        <a href="" class="popup__logo">EL-CO</a>
+				        <div class="main-footer__contacts">
+							<p class="main-footer__block">+380 67 455 45 45</p>
+							<p class="main-footer__block main-footer__block--email">info@site.com.ua</p>
+						</div>
+						<div class="popup__text">
+				          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				        </div>
+				      </div><!--end popup__item-->
+				    </div>
+				 </div>
+
+				<div class="popup popup__category">
+					<div class="elem__wrap">
+						<button class="overlay-close"></button>
+						<div class="elem__content">
+							<h3 class="elem__title">Категорії</h3>
+							<div class="elem__holder">
+								<input type="text" class="elem__input" placeholder="Пошук">
+								<button class="elem__btn"></button>
+							</div>
+							<div class="elem__row">
+								<ul class="elem__list">
+									<li class="elem__box elem__box--active">Реле напруги</li>
+									<li class="elem__box">Таймери</li>
+									<li class="elem__box">Реле напруги</li>
+									<li class="elem__box">Таймери</li>
+									<li class="elem__box">Реле напруги</li>
+									<li class="elem__box">Таймери</li>
+									<li class="elem__box">Реле напруги</li>
+									<li class="elem__box">Таймери</li>
+									<li class="elem__box">Реле напруги</li>
+									<li class="elem__box">Таймери</li>
+									<li class="elem__box">Реле напруги</li>
+								</ul>
+							</div>
+						</div>
+					</div><!--end elem__wrap-->
+				</div>
+
+				<div class="popup popup__filter">
+					<div class="elem__wrap">
+						<button class="overlay-close"></button>
+						<form class="elem__content">
+							<h3 class="elem__title">Фільтр</h3>
+							<div class="elem__holder">
+								<input type="text" class="elem__input" placeholder="Пошук">
+								<button class="elem__btn"></button>
+							</div>
+							<div class="filter__box filter__box--block">
+								<h3 class="filter__name">Вартість</h3>
+								<div class="filter__submenu filter__submenu--range">
+
+				                    <div class="custom-range__inner">
+				                        <p class="custom-range__min" data-id-custom-range="1">700</p>
+				                        <div class="filter__desc">
+					                       <span class="custom-range__min-value" data-id-custom-range="1" data-base-value="1500">1500</span> - 
+					                       <span class="custom-range__max-value" data-id-custom-range="1"  data-base-value="7000">7000</span>
+					                       <span class="filter__val">uan</span>
+					                    </div>
+				                        <p class="custom-range__max" data-id-custom-range="1">20000</p>
+				                    </div>
+				                    <div class="custom-range" data-id-custom-range="1" tabindex="0">
+				                        <div class="custom-range__line"></div>
+				                    </div>
+				                    
+				                </div>
+			            	</div>
+
+			            	<div class="filter__box filter__box--no-active">
+				                <h3 class="filter__name">Тип</h3>
+				                <div class="filter__submenu">
+				                	<div class="filter__item">
+				                       <input id="filter__1" type="radio" class="filter__input" name="block1" checked="">
+				                       <label for="filter__1" class="filter__label">Тип товару 1 </label>
+				                    </div>
+				                    <div class="filter__item">
+				                       <input id="filter__2" type="radio" class="filter__input" name="block1">
+				                       <label for="filter__2" class="filter__label">Тип товару 1</label>
+				                    </div>
+				                     <div class="filter__item">
+				                       <input id="filter__3" type="radio" class="filter__input" name="block1">
+				                       <label for="filter__3" class="filter__label">Тип товару 1</label>
+				                    </div>
+				                </div>
+				            </div>
+
+			            	<div class="filter__box filter__box--no-active">
+				                <h3 class="filter__name">Максимальна напруга</h3>
+				                <div class="filter__submenu">
+				                	<div class="filter__item">
+				                       <input id="filter__4" type="radio" class="filter__input" name="block2" checked="">
+				                       <label for="filter__4" class="filter__label">Тип товару 1 </label>
+				                    </div>
+				                    <div class="filter__item">
+				                       <input id="filter__5" type="radio" class="filter__input" name="block2">
+				                       <label for="filter__5" class="filter__label">Тип товару 1</label>
+				                    </div>
+				                     <div class="filter__item">
+				                       <input id="filter__6" type="radio" class="filter__input" name="block2">
+				                       <label for="filter__6" class="filter__label">Тип товару 1</label>
+				                    </div>
+				                </div>
+				            </div>
+
+			            	<div class="filter__box">
+				                <h3 class="filter__name">Тип</h3>
+				                <div class="filter__submenu">
+				                	<div class="filter__item">
+				                       <input id="filter__7" type="radio" class="filter__input" name="block3" checked="">
+				                       <label for="filter__7" class="filter__label">Тип товару 1 </label>
+				                    </div>
+				                    <div class="filter__item">
+				                       <input id="filter__8" type="radio" class="filter__input" name="block3">
+				                       <label for="filter__8" class="filter__label">Тип товару 1</label>
+				                    </div>
+				                     <div class="filter__item">
+				                       <input id="filter__9" type="radio" class="filter__input" name="block3">
+				                       <label for="filter__9" class="filter__label">Тип товару 1</label>
+				                    </div>
+				                </div>
+				            </div>
+			                <div class="filter__inner">	
+			                	<button class="btn btn--search">Пошук за фільтром</button>
+			                	<button class="btn btn--clear" type="reset">Очистити фільтр</button>
+			                </div>
+						</form>
+					</div><!--end elem__wrap-->
+				</div>
+
+				<div class="popup popup__reqcall">
+				    <div class="reqcall__wrap">
+				        <div class="popup__close"></div>
+				        <div class="reqcall__container">
+				            <div class="reqcall__inner">
+				                <h3 class="reqcall__title">Заказать звонок</h3>
+				                <form action="" class="reqcall__form">
+				                    <div class="reqcall__row">
+				                        <div class="select__wrap select__hour" id="select__hour">
+				                            <div class="select__placeholder"></div>
+				                            <ul class="select__list">
+				                                <li class="select__item" data-value="00">00</li>
+				                                <li class="select__item" data-value="01">01</li>
+				                                <li class="select__item" data-value="02">02</li>
+				                                <li class="select__item" data-value="03">03</li>
+				                                <li class="select__item" data-value="04">04</li>
+				                                <li class="select__item" data-value="05">05</li>
+				                                <li class="select__item" data-value="06">06</li>
+				                                <li class="select__item" data-value="07">07</li>
+				                                <li class="select__item" data-value="08">08</li>
+				                                <li class="select__item" data-value="09">09</li>
+				                                <li class="select__item" data-value="10">10</li>
+				                                <li class="select__item" data-value="11">11</li>
+				                                <li class="select__item" data-value="12">12</li>
+				                                <li class="select__item" data-value="13">13</li>
+				                                <li class="select__item" data-value="14">14</li>
+				                                <li class="select__item" data-value="15">15</li>
+				                                <li class="select__item" data-value="16">16</li>
+				                                <li class="select__item" data-value="17">17</li>
+				                                <li class="select__item" data-value="18">18</li>
+				                                <li class="select__item" data-value="19">19</li>
+				                                <li class="select__item" data-value="20">20</li>
+				                                <li class="select__item" data-value="21">21</li>
+				                                <li class="select__item" data-value="22">22</li>
+				                                <li class="select__item" data-value="23">23</li>
+				                            </ul>
+				                        </div>
+				                        <div class="select__wrap select__minute" id="select__minute">
+				                            <div class="select__placeholder"></div>
+				                            <ul class="select__list">
+				                                <li class="select__item" data-value="00">00</li>
+				                                <li class="select__item" data-value="05">05</li>
+				                                <li class="select__item" data-value="10">10</li>
+				                                <li class="select__item" data-value="15">15</li>
+				                                <li class="select__item" data-value="20">20</li>
+				                                <li class="select__item" data-value="25">25</li>
+				                                <li class="select__item" data-value="30">30</li>
+				                                <li class="select__item" data-value="35">35</li>
+				                                <li class="select__item" data-value="40">40</li>
+				                                <li class="select__item" data-value="45">45</li>
+				                                <li class="select__item" data-value="50">50</li>
+				                                <li class="select__item" data-value="55">55</li>
+				                            </ul>
+				                        </div>
+				                        <div class="select__wrap select__day" id="select__day">
+				                            <div class="select__placeholder"></div>
+				                            <ul class="select__list">
+				                                <li class="select__item" data-value="Сегодня">Сегодня</li>
+				                                <li class="select__item" data-value="Завтра">Завтра</li>
+				                                <li class="select__item" data-value="Послезавтра">Послезавтра</li>
+				                            </ul>
+				                        </div>
+				                    </div>
+				                    <div class="reqcall__error">Неверный номер телефона</div>
+				                    <div class="reqcall__row">
+				                        <input type="tel" class="reqcall__input" placeholder="Номер телефона">
+				                        <button class="reqcall__btn">Отправить</button>
+				                    </div>
+				                </form>
+				                <p class="reqcall__example">Например: 093 000 00 00</p>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+
+
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

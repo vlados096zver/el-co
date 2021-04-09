@@ -1,0 +1,119 @@
+@import 'responsive'
+
+.filter
+	&__desc
+		display: flex
+		color: #1B58B1
+		+media(mini)
+			flex-basis: 100%
+			order: -2
+			justify-content: center
+			padding-bottom: 15px
+		
+	&__val
+		font-size: 18px
+		text-transform: uppercase
+		padding-left: 5px
+
+	&__name
+		cursor: pointer
+		user-select: none
+		position: relative
+		font-size: 24px
+		line-height: 1.25
+		color: #333
+		text-transform: uppercase
+		padding-right: 25px
+		margin-bottom: 25px
+		font-weight: normal
+		+media(sm)
+			font-size: 21px
+		&:after
+			position: absolute
+			z-index: 2
+			top: 5px
+			right: 5px
+			width: 12px
+			height: 12px
+			content: ' '
+			border-right: 1px solid #333
+			border-bottom: 1px solid #333
+			pointer-events: none
+			transform: rotate(45deg)
+			transition: 0.3s border, 0.3s top, 0.3s transform
+			+media(sm)
+				top: 3px
+
+	&__box
+		&--block
+			padding-bottom: 5px
+
+		&--no-active
+			.filter__submenu
+				display: none
+
+			.filter__name
+				&:after
+					top: 13px
+					transform: rotate(-135deg)
+					+media(sm)
+						top: 11px
+
+	&__item
+		display: flex	
+		align-items: center
+
+	&__submenu
+		padding-bottom: 18px
+		.filter__item:not(:last-child)
+			margin-bottom: 15px
+
+	&__label
+		cursor: pointer
+		display: inline-block
+		user-select: none
+		position: relative
+		font-size: 18px
+		line-height: 1.2
+		color: #000
+		padding: 2px 0		
+		padding-left: 35px
+		&:after,
+		&:before
+			position: absolute
+			content: ' '
+
+		&:after
+			top: 0px
+			left: 0px
+			width: 25px
+			height: 25px
+			border-radius: 4px
+			border: 2px solid #1B58B1
+
+		&:before
+			opacity: 0
+			visibility: hidden
+			top: 5px
+			left: 5px
+			width: 15px
+			height: 15px
+			border-radius: 2px
+			background-color: #1B58B1
+			transition: 0.3s visibility, 0.3s opacity
+
+	&__input
+		display: none
+		&:checked + .filter__label:before		
+			opacity: 1
+			visibility: visible
+
+	&__inner
+		display: flex	
+		align-items: center
+		padding-top: 35px	
+		padding-bottom: 3px	
+		border-top: 1px solid #c4c4c4
+		margin-top: 16px
+		+media(sm)
+			flex-direction: column

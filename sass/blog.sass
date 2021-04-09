@@ -1,0 +1,167 @@
+@import 'responsive'
+
+.blog
+	padding-bottom: 45px
+	.slick-list
+		margin: 0 -20px
+		+media(sm)
+			margin: 0px
+
+	&__all
+		position: relative
+		display: inline-block
+		font-size: 18px
+		line-height: 1.2
+		color: #1B58B1
+		text-transform: uppercase
+		padding-left: 85px
+		margin-bottom: 50px
+		transition: 0.3s color
+		+media(md)
+			margin-bottom: 30px
+		+media(smdx)
+			padding-left: 0px
+		&:after
+			position: absolute
+			content: ' '
+			top: 4px
+			left: 0px
+			background-image: url(../img/icons/decor--inner.svg)
+			width: 31px
+			height: 8px
+			+media(smdx)
+				display: none
+		&:hover
+			color: #0b2347
+
+	.title--inner
+		padding-right: 55px
+
+	&__wrap
+		+media(sm)
+			max-width: 500px
+			margin: 0px	auto
+
+	&__item
+		display: block
+		outline: none
+		box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.05)
+		margin: 0 20px
+		margin-bottom: 60px
+		+media(sm)
+			margin: 0px	
+			margin-bottom: 45px	
+
+		&:hover
+			.btn--blog
+				color: #0b2347
+
+			.btn--blog:after
+				background-color: #0b2347
+
+			.btn--blog:before
+				border-color: #0b2347
+
+	&__image
+		display: block
+		padding-top: 62%
+		background-size: cover
+		background-repeat: no-repeat
+
+	&__text
+		background-color: #fff
+		padding: 28px 40px
+		+media(mdx)
+			padding: 28px 20px
+			padding-bottom: 10px	
+
+	&__subtitle
+		font-size: 18px
+		line-height: 1.3
+		color: #000000
+		padding-bottom: 20px
+
+	&__desc
+		padding-bottom: 20px
+		p
+			font-size: 14px
+			line-height: 1.7
+			color: #acaaaa
+
+	&__holder
+		position: relative
+
+	&__arrow
+		position: absolute
+		top: calc(50% - 20px)
+		right: -60px
+		display: block
+		cursor: pointer
+		outline: none
+		border: none
+		background-color: transparent
+		width: 40px
+		height: 40px
+		padding: 0px
+		transition: 0.3s border
+		&:after
+			position: absolute
+			content: ' '
+			width: 20px
+			height: 20px
+			top: calc(50% - 10px)
+			left: calc(50% - 12px)
+			border-right: 2px solid #1B58B1
+			border-bottom: 2px solid #1B58B1
+			transform: rotate(-45deg)
+			transition: 0.3s border
+		+media(lgm)
+			display: none
+		&:hover:after
+			border-color: #0b2347
+	
+	&__dots-list
+		position: absolute
+		display: none
+		+media(lgm)
+			display: flex
+			position: relative
+			justify-content: center
+			right: initial
+			margin: 0 auto
+			margin-top: 20px
+
+		button
+			display: block
+			cursor: pointer
+			position: relative
+			background-color: transparent
+			width: 20px
+			height: 20px
+			font-size: 0px
+			padding: 0px
+			border: 4px solid transparent
+			outline: none
+			margin-bottom: 30px
+			&:after
+				position: absolute
+				content: ' '
+				left: calc(50% - 5px)
+				top: calc(50% - 5px)
+				width: 10px
+				height: 10px
+				background-color: #1B58B1
+				border-radius: 50%
+				transition: 0.3s background-color, 0.3s transform
+
+		li
+			&:not(:last-child)
+				+media(lgm)
+					margin-right: 12px
+
+			&.slick-active	button
+				border: 4px solid #1B58B1
+				border-radius: 50%
+				&:after
+					background-color: #fff
+					transform: scale(0)

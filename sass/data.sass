@@ -1,0 +1,71 @@
+@import 'responsive'
+
+.data
+	min-height: 100vh
+	&__title
+		font-size: 144px
+		line-height: 1.2
+		color: rgba(51, 51, 51, 0.1)
+		text-align: center
+		text-transform: uppercase
+		padding-top: 46px
+		padding-bottom: 25px
+		font-weight: 200
+		+media(mdx)
+			font-size: 100px
+		+media(sm)
+			font-size: 60px
+
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		padding-bottom: 40px
+
+	&__item
+		width: calc(100% / 3)
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		min-height: 600px
+		background-repeat: no-repeat
+		background-size: cover
+		+media(big)
+			min-height: 330px
+		+media(mdx)
+			width: 100%
+			min-height: 330px
+			margin-bottom: 40px
+		+media(sm)
+			min-height: 230px
+		+media(xs)
+			min-height: 110px
+		&:after
+			position: absolute
+			content: ' '
+			top: 0px
+			left: 0px
+			width: 100%
+			height: 100%
+			background: rgba(0, 0, 0, 0.7)
+			transition: 0.3s background-color
+		&:hover
+			&:after
+				background-color: transparent
+
+	&__subtitle
+		position: relative
+		z-index: 2
+		font-size: 30px
+		line-height: 1.2
+		color: #fff
+		text-align: center
+		text-transform: uppercase
+		font-weight: bold
+		+media(lgxs)
+			font-size: 27px
+		+media(mdx)
+			font-size: 22px
+		+media(sm)
+			font-size: 18px
