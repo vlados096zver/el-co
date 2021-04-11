@@ -27,7 +27,7 @@
 	&__arrow
 		position: absolute
 		top: calc(50% - 20px)
-		right: -60px
+		right: -70px
 		display: block
 		cursor: pointer
 		outline: none
@@ -37,21 +37,23 @@
 		height: 40px
 		padding: 0px
 		transition: 0.3s border
+		+media(lb)
+			right: -60px
 		&:after
 			position: absolute
 			content: ' '
-			width: 20px
-			height: 20px
-			top: calc(50% - 10px)
-			left: calc(50% - 12px)
-			border-right: 2px solid #1B58B1
-			border-bottom: 2px solid #1B58B1
+			width: 28px
+			height: 28px
+			top: calc(50% - 14px)
+			left: calc(50% - 22px)
+			border-right: 2px solid rgba(0, 0, 0, 0.3)
+			border-bottom: 2px solid rgba(0, 0, 0, 0.3)
 			transform: rotate(-45deg)
 			transition: 0.3s border
 		+media(lgm)
 			display: none
 		&:hover:after
-			border-color: #0b2347
+			border-color: rgba(0, 0, 0, 1)
 	
 	&__dots-list
 		position: absolute

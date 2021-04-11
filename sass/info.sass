@@ -1,7 +1,7 @@
 @import 'responsive'
 
 .info
-	padding-bottom: 75px
+	padding-bottom: 45px
 	+media(mdx)
 		padding-bottom: 20px
 
@@ -55,6 +55,7 @@
 
 	&__holder
 		background-image: url(../img/bg-info.png)
+		background-repeat: no-repeat
 		background-size: cover
 		position: relative
 		display: flex
@@ -65,7 +66,7 @@
 		min-height: 418px
 		+media(mdx)
 			margin: 0 auto
-			margin-bottom: 25px
+			margin-bottom: 45px
 		+media(sm)
 			max-width: 300px
 			min-height: 315px
@@ -80,10 +81,13 @@
 			display: block
 			top: -100px
 			z-index: 2
+			max-width: 330px
+			+media(md)
+				max-width: 260px
 			+media(sm)
-				max-height: 280px
+				max-height: 220px
 			+media(xxs)
-				max-height: 230px
+				//max-height: 230px
 
 
 	.slick-initialized .slick-slide

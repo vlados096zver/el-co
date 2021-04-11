@@ -3,47 +3,70 @@
 .basket
 	margin-top: 62px
 
-	&__wrap-table
-		overflow-x: auto
-		overflow-y: hidden
-
 	&__item
 		display: flex
 		align-items: center
-		width: 100%
-		min-width: 940px
-		padding: 6px 22px
+		padding: 7px 22px
+		padding-right: 35px
+		padding-bottom: 8px
 		background-color: #fff
 		margin-bottom: 22px
+		+media(md)
+			flex-direction: column
+			padding: 15px 22px
 
-	.basket__box:nth-child(1)
-		min-width: 105px
-		max-width: 105px
+	&__box
+		display: flex	
+		align-items: center
+		+media(md)
+			justify-content: center
 
-	.basket__box:nth-child(2)
-		min-width: 270px
-		max-width: 520px
-		padding-left: 28px
-		padding-right: 15px
-		width: 100%
-		font-size: 18px
+		&--image
+			img
+				display: block
 
-	.basket__box:nth-child(3)
-		min-width: 165px
-		max-width: 165px
+	&__col
+		display: flex
+		align-items: center
+		&:first-child
+			width: calc(100% - 496px)
+			+media(md)
+				width: initial
+				margin-bottom: 15px
+			+media(xxs)
+				flex-direction: column
+			.basket__box:nth-child(1)
+				width: 105px
 
-	.basket__box:nth-child(4)
-		min-width: 146px
-		max-width: 146px
+			.basket__box:nth-child(2)
+				width: calc(100% - 105px)
+				padding-left: 28px
+				padding-right: 15px				
+				font-size: 18px
+				+media(sm)
+					line-height: 1.5
+					width: 100%			
+				+media(xxs)
+					text-align: center
 
-	.basket__box:nth-child(5)
-		min-width: 160px
-		max-width: 160px
+		&:last-child
+			width: 496px
+			+media(md)
+				width: auto
+				flex-wrap: wrap
+			.basket__box:nth-child(1)
+				min-width: 278px
+				max-width: 278px
+				+media(md)
+					margin: 0px auto
+					margin-bottom: 20px
 
-	.basket__box:nth-child(6)
-		min-width: 60px
-		max-width: 60px
-		padding-right: 28px
+			.basket__box:nth-child(2)
+				min-width: 215px
+				max-width: 215px
+				+media(md)
+					margin: 0px auto
+					margin-bottom: 15px
 
 	&__single,
 	&__sum
@@ -54,6 +77,14 @@
 		text-align: center
 		font-weight: 200
 
+	&__single
+		min-width: 148px
+		max-width: 148px
+
+	&__sum
+		min-width: 180px
+		max-width: 180px
+
 	&__container
 		display: flex
 		max-width: 130px
@@ -63,7 +94,6 @@
 		border-radius: 20px
 		padding: 10px 10px
 		padding-bottom: 9px
-		margin-right: 30px
 		input
 			display: block	
 			background-color: inherit
@@ -107,8 +137,8 @@
 	&__close
 		cursor: pointer
 		position: relative
-		min-width: 20px
-		height: 20px
+		min-width: 25px
+		height: 25px
 		display: flex
 		justify-content: flex-end
 		align-items: center
@@ -122,17 +152,17 @@
 			content: ''
 			position: absolute
 			left: 0px
-			width: 20px
-			height: 2px
+			width: 25px
+			height: 1px
 			background-color: #e35959
 
 		&:before
-			bottom: 16px
+			bottom: 20px
 			transform: rotate(45deg)
 			transform-origin: 0 100%
 
 		&:after
-			top: 16px
+			top: 21px
 			transform: rotate(-45deg)
 			transform-origin: 0 0
 
