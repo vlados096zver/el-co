@@ -728,11 +728,10 @@ $(document).ready(function() {
     $(item).on('click', '.filter__name', function() {
       if (!$(item).hasClass('filter__box--no-active')) {
         $(item).addClass('filter__box--no-active');
-        $(this).next().slideToggle();
       } else {
         $(item).removeClass('filter__box--no-active');
-        $(this).next().slideToggle();
       }
+      $(this).next().slideToggle();
     })
   })
 

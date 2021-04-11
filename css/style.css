@@ -3338,10 +3338,6 @@ img {
 	padding-bottom: 5px;
 }
 
-.filter__box--no-active .filter__submenu {
-	display: none;
-}
-
 .filter__box--no-active .filter__name:after {
 	top: 13px;
 	transform: rotate(-135deg);
