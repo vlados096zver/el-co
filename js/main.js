@@ -1,5 +1,40 @@
 $(document).ready(function() {
 
+  $('.compare__wrap-table').scroll(function() {
+    var pos = $(this).scrollLeft();
+    $('.compare__cell:first-child').css({'left': pos - 1 + 'px'});
+    if(pos > 5) {
+        $('.compare__cell:first-child').addClass('scrolled');
+    } else {
+        $('.compare__cell:first-child').removeClass('scrolled');
+    }
+});
+
+$('.compare__row--title .compare__cell').each(function() {
+    $(this).height($(this).height());
+});
+
+(function() {
+
+    if($('.compare__row--title .compare__cell').length > 0) {
+        var pos = $('.compare__row--title .compare__cell').offset().top;
+        $(window).on('scroll', function(e) {
+            var scrollWin = $(this).scrollTop();
+
+            if(scrollWin >= pos) {
+                $('.compare__inner').css({
+                    'position': 'absolute',
+                    'border-bottom': '1px solid #b2b2b2',
+                    'top': scrollWin - pos + 'px'
+                }).addClass('scrolled');
+            } else {
+                $('.compare__inner').attr('style', '').removeClass('scrolled');
+            }
+        });
+    }
+
+})();
+
   if ($('[data-js-scroll]').length > 0) {
 
     let $s1 = $('#s1'),
@@ -253,6 +288,26 @@ $(document).ready(function() {
   changeSlideClick('.product__arrow--dir_right', '.product__wrap');
   changeSlideClick('.partners__arrow--dir_right', '.partners__wrap');
   changeSlideClick('.blog__arrow--dir_right', '.blog__wrap');
+
+  function ChangeStateArrow(elem, arrow, number) {
+    let count = $(elem).length;
+   var resizeTimeout;
+    $(window).on('resize', function() {
+      let win = $(this);
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(function() {
+        if (win.width() > 1351 && count > number) {
+          $(arrow).show();
+        } else {
+          $(arrow).hide();
+        }
+      }, 100);
+    }).trigger('resize', arrow);
+  }
+
+  ChangeStateArrow('.product__item', '.product__arrow', 8);
+  ChangeStateArrow('.partners__item', '.partners__arrow', 4);
+  ChangeStateArrow('.blog__item', '.blog__arrow', 3);
 
   $(".tabs__box").click(function() {
     $(".tabs__box").removeClass("tabs__box--active").eq($(this).index()).addClass("tabs__box--active");

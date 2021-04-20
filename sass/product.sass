@@ -86,9 +86,9 @@
 
 	&__icons
 		display: flex
+		flex-wrap: wrap
 		align-items: center
 		justify-content: center
-		margin-bottom: 24px
 
 	&__btn
 		cursor: pointer
@@ -99,6 +99,7 @@
 		border: none
 		background-color: #fff
 		outline: none
+		margin-bottom: 19px
 		svg
 			fill: #1B58B1
 			transition: 0.3s fill
@@ -109,6 +110,37 @@
 
 		&--active svg
 			fill: #04C55C	
+
+		&--close
+			position: relative
+			width: 30px
+			height: 30px
+			cursor: pointer
+			padding: 0px
+			border: none
+			outline: none
+			z-index: 1
+
+			&:after,
+			&:before
+				content: ''
+				position: absolute
+				top: 14px
+				left: 0
+				width: 30px
+				height: 3px
+				background-color: #1B58B1
+				transition: 0.3s background-color
+
+			&:after
+				transform: rotate(45deg)
+			&:before
+				transform: rotate(-45deg)
+
+			&:hover
+				&:after,
+				&:before
+					background-color: #0b2347
 
 	&__price
 		display: flex
